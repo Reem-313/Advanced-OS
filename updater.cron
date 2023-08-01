@@ -1,0 +1,7 @@
+PROJECT_PATH=/home/pi/project
+LOGS_PATH=/home/pi/logs
+AVERAGE_COUNT=4
+CAMERA_OUTPUT_DST=/home/pi/images
+0 * * * * bash $PROJECT_PATH/updater.sh
+0,30 * * * * bash $PROJECT_PATH/capture_readings.sh
+0 * * * * bash $PROJECT_PATH/backup.sh
